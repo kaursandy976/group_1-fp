@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activityies.AllUsersActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/userrecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/adduser"
+                    android:orientation="vertical"
+                    tools:listitem="@layout/users_items"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:reverseLayout="false" />
+
+
+            <Button
+                android:id="@+id/adduser"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/purple_700"
+                android:text="Add User"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/detilslayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"/>
+
+
+            <TextView
+                android:id="@+id/tabname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="Ajeet Singh"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tabemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="amit12dd@gmail.com"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tabphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9889438484"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

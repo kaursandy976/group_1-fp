@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activityies.CaptaActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the trafic lights"
+        android:textAlignment="center"
+        android:textSize="19sp"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/captarecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        tools:listitem="@layout/capta_items"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.5"/>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I'm not a robot"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:layout_weight="0.5"/>
+
+        <ImageView
+            android:id="@+id/reload"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.9"
+            android:src="@drawable/reload"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/verify"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:text="Verify"
+        android:textAllCaps="true"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:background="@color/purple_700"
+        android:textColor="@color/white"/>
+
+
+
+</LinearLayout>
